@@ -525,6 +525,141 @@ div#particles-js canvas {
 
 
 /* Ammar's Css */
+.portfolio-sec {
+    width: 100%;
+    padding: 70px 0 0 0;
+}
+
+.portfolio-sec .pf-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portfolio-sec .pf-top .pf-lf {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    width: 60%;
+}
+
+.portfolio-sec .pf-bottom {
+    margin-top: 40px;
+}
+
+.portfolio-sec .pf-bottom .pf-bottom-box {
+    width: 100%;
+    height: 300px;
+    background: #3D5163 url(../images/pf-img-1.png);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    box-shadow: 4px 4px 16px 0px #3D51633D;
+}
+
+.box-text {
+    padding: 40px 48px 50px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 786px;
+}
+
+.box-text h3 {
+    font-family: Inter;
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 61.6px;
+    letter-spacing: -0.005em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+}
+
+.box-text p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    letter-spacing: 0.005em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFFDE;
+}
+
+.box-text a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    text-align: left;
+    text-transform: capitalize;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: auto;
+    color: #FFFFFF;
+}
+
+.ex-boxes {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.ex-boxes .box-1 {
+    width: 100%;
+    max-width: 420px;
+    background-color: #8EA7FF;
+    box-shadow: 4px 4px 16px 0px #8EA7FF3D;
+    border-radius: 16px;
+}
+
+.ex-boxes .box-1 .box-text {
+    padding: 40px 30px 45px 40px;
+}
+
+.ex-boxes .box-1 .box-text h3 {
+    color: #162120;
+}
+
+.ex-boxes .box-1 .box-text p {
+    color: #162120;
+}
+
+.ex-boxes .box-1 .box-text a {
+    color: #162120;
+}
+
+.box-2 {
+    width: 100%;
+    max-width: 857px;
+    height: 320px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 4px 4px 16px 0px #96BF483D;
+    display: flex;
+    align-items: center;
+}
+
+.box-2 .box-img {
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+}
+
+.box-2 .box-text {
+    padding: 40px 27px 0 40px;
+}
 
 .plan-sec {
     width: 100%;
@@ -556,20 +691,6 @@ div#particles-js canvas {
 
 .plan-cntn .plan-left-cntn p.disc {
     color: #FFFFFFDE;
-}
-
-.btn a {
-    padding: 24px 44px;
-    display: block;
-    width: fit-content;
-    background-color: #96BF48;
-    font-family: monospace;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 90%;
-    text-align: center;
-    border-radius: 40px;
-    color: #FFFFFF;
 }
 
 .plan-cntn .plan-right-cntn {
