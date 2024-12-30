@@ -346,6 +346,7 @@ ul.mm-socials li a img {
     display: flex;
     align-items: center;
     padding: 140px 0px 260px;
+    margin-bottom: -46px;
 }
 
 .banner-sec::after {
@@ -530,7 +531,7 @@ div#particles-js canvas {
 
 .about-sec {
     width: 100%;
-    padding: 113px 0 120px 0;
+    padding: 160px 0 120px 0;
     background-image: url(../images/sq-pattern.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -1136,7 +1137,7 @@ swiper-slide .rev-box .rev-cntn .reviewer-name {
     color: #2C2C2C;
 }
 
-.swiper-pagination {
+.swiper-pagination-clickable {
     display: none;
 }
 
