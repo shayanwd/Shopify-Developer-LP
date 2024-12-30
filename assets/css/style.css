@@ -983,7 +983,7 @@ div#particles-js canvas {
 
 .testimonials-sec {
     width: 100%;
-    padding: 66px 0 168px 0;
+    padding: 66px 0 80px 0;
     background-image: url(../images/sq-pattern.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -1008,6 +1008,8 @@ div#particles-js canvas {
     align-items: flex-end;
     gap: 20px;
     margin-top: 80px;
+    position: relative;
+    padding-bottom: 90px;
 }
 
 .tst-bottom .bt-box {
@@ -1079,25 +1081,26 @@ div#particles-js canvas {
     color: #FFFFFF;
 }
 
-swiper-container {
+.swiper {
     width: 100%;
     max-width: 640px;
     height: 376px;
+    position: static !important;
 }
 
-swiper-slide {
+.swiper-slide {
     border: 1px solid #0000001F;
     border-radius: 16px;
     background: #fff;
 }
 
-swiper-slide .rev-box {
+.swiper-slide .rev-box {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-swiper-slide .rev-box .main-img {
+.swiper-slide .rev-box .main-img {
     max-width: 310px;
     height: 376px;
     border-radius: 16px;
@@ -1105,13 +1108,13 @@ swiper-slide .rev-box .main-img {
     overflow: hidden;
 }
 
-swiper-slide .rev-box .main-img img {
+.swiper-slide .rev-box .main-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-swiper-slide .rev-box .rev-cntn {
+.swiper-slide .rev-box .rev-cntn {
     max-width: 310px;
     padding-right: 40px;
     display: flex;
@@ -1120,12 +1123,12 @@ swiper-slide .rev-box .rev-cntn {
     gap: 60px;
 }
 
-swiper-slide .rev-box .rev-cntn img {
+.swiper-slide .rev-box .rev-cntn img {
     width: 88px;
     height: 56px;
 }
 
-swiper-slide .rev-box .rev-cntn .reviewer-name {
+.swiper-slide .rev-box .rev-cntn .reviewer-name {
     font-family: Inter;
     font-size: 20px;
     font-weight: 400;
@@ -1137,8 +1140,39 @@ swiper-slide .rev-box .rev-cntn .reviewer-name {
     color: #2C2C2C;
 }
 
-.swiper-pagination-clickable {
-    display: none;
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: '' !important;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: '' !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 64px !important;
+    height: 64px !important;
+    background-color: #FFFFFF;
+    border: 1px solid #2C2C2C1F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.swiper-button-next, .swiper-button-prev{
+    top: auto !important;
+}
+.swiper-button-prev {
+    top: 24px !important;
+    left: 245px !important;
+}
+
+.swiper-button-next {
+    bottom: 0 !important;
+    right: 245px !important;
 }
 
 /* Plan */

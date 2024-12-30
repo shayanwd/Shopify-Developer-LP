@@ -13,8 +13,10 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -372,55 +374,95 @@
                     <h5>Founder @Forbes</h5>
                 </div>
 
-                <swiper-container class="mySwiper" keyboard="true" space-between="10" navigation="true">
-                    <swiper-slide>
-                        <div class="rev-box">
-                            <div class="main-img">
-                                <img src="./assets/images/reviewer-img.png" alt="">
-                            </div>
-                            <div class="rev-cntn">
-                                <img src="./assets/images/rev-img.svg" alt="">
-                                <p class="disc">
-                                    Lorem ipsum odor amet, consectetuer adipiscing elit. Et risus justo adipiscing
-                                    habitasse convallis tellus.
-                                </p>
-                                <h3 class="reviewer-name">[Present]</h3>
-                            </div>
-                        </div>
-                    </swiper-slide>
-                    
-                    <swiper-slide>
-                        <div class="rev-box">
-                            <div class="main-img">
-                                <img src="./assets/images/reviewer-img.png" alt="">
-                            </div>
-                            <div class="rev-cntn">
-                                <img src="./assets/images/rev-img.svg" alt="">
-                                <p class="disc">
-                                    Lorem ipsum odor amet, consectetuer adipiscing elit. Et risus justo adipiscing
-                                    habitasse convallis tellus.
-                                </p>
-                                <h3 class="reviewer-name">[Present]</h3>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="rev-box">
+                                <div class="main-img">
+                                    <img src="./assets/images/reviewer-img.png" alt="">
+                                </div>
+                                <div class="rev-cntn">
+                                    <img src="./assets/images/rev-img.svg" alt="">
+                                    <p class="disc">
+                                        Lorem ipsum odor amet, consectetuer adipiscing elit. Et risus justo adipiscing
+                                        habitasse convallis tellus.
+                                    </p>
+                                    <h3 class="reviewer-name">[Present]</h3>
+                                </div>
                             </div>
                         </div>
-                    </swiper-slide>
 
-                    <swiper-slide>
-                        <div class="rev-box">
-                            <div class="main-img">
-                                <img src="./assets/images/reviewer-img.png" alt="">
-                            </div>
-                            <div class="rev-cntn">
-                                <img src="./assets/images/rev-img.svg" alt="">
-                                <p class="disc">
-                                    Lorem ipsum odor amet, consectetuer adipiscing elit. Et risus justo adipiscing
-                                    habitasse convallis tellus.
-                                </p>
-                                <h3 class="reviewer-name">[Present]</h3>
+                        <div class="swiper-slide">
+                            <div class="rev-box">
+                                <div class="main-img">
+                                    <img src="./assets/images/reviewer-img.png" alt="">
+                                </div>
+                                <div class="rev-cntn">
+                                    <img src="./assets/images/rev-img.svg" alt="">
+                                    <p class="disc">
+                                        Lorem ipsum odor amet, consectetuer adipiscing elit. Et risus justo adipiscing
+                                        habitasse convallis tellus.
+                                    </p>
+                                    <h3 class="reviewer-name">[Present]</h3>
+                                </div>
                             </div>
                         </div>
-                    </swiper-slide>
-                </swiper-container>
+
+                        <div class="swiper-slide">
+                            <div class="rev-box">
+                                <div class="main-img">
+                                    <img src="./assets/images/reviewer-img.png" alt="">
+                                </div>
+                                <div class="rev-cntn">
+                                    <img src="./assets/images/rev-img.svg" alt="">
+                                    <p class="disc">
+                                        Lorem ipsum odor amet, consectetuer adipiscing elit. Et risus justo adipiscing
+                                        habitasse convallis tellus.
+                                    </p>
+                                    <h3 class="reviewer-name">[Present]</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rev-box">
+                                <div class="main-img">
+                                    <img src="./assets/images/reviewer-img.png" alt="">
+                                </div>
+                                <div class="rev-cntn">
+                                    <img src="./assets/images/rev-img.svg" alt="">
+                                    <p class="disc">
+                                        Lorem ipsum odor amet, consectetuer adipiscing elit. Et risus justo adipiscing
+                                        habitasse convallis tellus.
+                                    </p>
+                                    <h3 class="reviewer-name">[Present]</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="rev-box">
+                                <div class="main-img">
+                                    <img src="./assets/images/reviewer-img.png" alt="">
+                                </div>
+                                <div class="rev-cntn">
+                                    <img src="./assets/images/rev-img.svg" alt="">
+                                    <p class="disc">
+                                        Lorem ipsum odor amet, consectetuer adipiscing elit. Et risus justo adipiscing
+                                        habitasse convallis tellus.
+                                    </p>
+                                    <h3 class="reviewer-name">[Present]</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <img src="./assets/images/right-arrow.svg" alt="">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="./assets/images/left-arrow.svg" alt="">
+                    </div>
+                </div>
 
                 <div class="bt-box">
                     <div class="box-top">
@@ -680,7 +722,25 @@
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
     <script>
         particlesJS("particles-js", { "particles": { "number": { "value": 81, "density": { "enable": true, "value_area": 718.0870161888723 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 3 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.1994686156080201, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 11.968116936481206, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 4.03808723883671, "sync": false } }, "line_linked": { "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.07978744624320804, "width": 1 }, "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": true, "mode": "repulse" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 266.5137577632229, "size": 12.114261716510132, "duration": 2, "opacity": 0.1857520129864887, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }); var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function () { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
