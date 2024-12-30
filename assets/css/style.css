@@ -525,6 +525,147 @@ div#particles-js canvas {
 
 
 /* Ammar's Css */
+
+/* About */
+
+.about-sec {
+    width: 100%;
+    padding: 113px 0 120px 0;
+    background-image: url(../images/sq-pattern.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about-md {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.about-md .md-left {
+    max-width: 525px;
+}
+
+.about-md .md-left h1 {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 44.8px;
+    letter-spacing: -0.005em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2C2C2C;
+}
+
+.about-md .md-left h1 span {
+    font-weight: 500;
+    color: #648C3C;
+}
+
+.about-md .md-right {
+    max-width: 565px;
+}
+
+.about-md .md-right .site-btn {
+    margin-top: 40px;
+    padding: 16px 24px;
+    font-family: Monospace;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 14.4px;
+}
+
+.about-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.about-bottom .circle-box {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid #2C2C2C33;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all .4s ease;
+    margin-left: -30px;
+}
+
+.about-bottom .circle-box:first-child {
+    margin-left: 0;
+}
+
+.about-bottom .circle-box span {
+    transition: all .9s ease;
+}
+
+.about-bottom .circle-box span img {
+    width: 80px;
+    height: 80px;
+}
+
+.about-bottom .circle-box span img:last-child {
+    display: none;
+}
+
+.about-bottom .circle-box h6 {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.005em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2C2C2C5C;
+    transition: color .4s ease;
+    max-width: 192px;
+    transition: color .4s ease;
+}
+
+.about-bottom .circle-box:hover {
+    background-color: #FFFF8D33;
+    border: 1px solid #F4B400;
+}
+
+.about-bottom .circle-box:hover span img:first-child {
+    display: none;
+}
+
+.about-bottom .circle-box:hover span img:last-child {
+    display: block;
+}
+
+.about-bottom .circle-box:hover h6 {
+    color: #2C2C2C;
+}
+
+.about-bottom .shopify:hover {
+    background-color: #95C67533;
+    border: 1px solid #95C675;
+}
+
+.about-bottom .store:hover {
+    background-color: #FF9F9F14;
+    border: 1px solid #FF3131;
+}
+
+.about-bottom .custom:hover {
+    background-color: #9AC3F933;
+    border: 1px solid #2F88FF;
+}
+
+/* Service */
+
 .services-sec {
     width: 100%;
     padding: 70px 0 80px 0;
@@ -646,6 +787,8 @@ div#particles-js canvas {
 .serv-bottom .serv-box:hover span img:last-child {
     display: block;
 }
+
+/* Portfolio */
 
 .portfolio-sec {
     width: 100%;
@@ -806,6 +949,8 @@ div#particles-js canvas {
     color: #162120;
 }
 
+/* Choose-US */
+
 .choose-us-sec {
     width: 100%;
     padding: 267px 0 219px;
@@ -833,6 +978,8 @@ div#particles-js canvas {
     color: #FFFFFFDE;
 }
 
+/* Testimonial */
+
 .testimonials-sec {
     width: 100%;
     padding: 66px 0 80px 0;
@@ -854,6 +1001,8 @@ div#particles-js canvas {
     gap: 40px;
     max-width: 856px;
 }
+
+/* Plan */
 
 .plan-sec {
     width: 100%;
@@ -917,7 +1066,7 @@ div#particles-js canvas {
     border-radius: 40px;
     padding: 16px 32px;
     transition: all 0.3s ease-in;
-    font-family: monospace;
+    font-family: "Monospace";
     font-size: 24px;
     font-weight: 700;
     line-height: 21.6px;
@@ -1023,6 +1172,8 @@ div#particles-js canvas {
     height: 16px;
 }
 
+/* Contact */
+
 .contact-sec {
     width: 100%;
     padding: 70px 0 86px 0;
@@ -1046,9 +1197,8 @@ div#particles-js canvas {
 
 .before-title h4 {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 140%;
-    font-family: monospace;
     color: #96BF48;
     text-align: left;
 }
@@ -1163,10 +1313,9 @@ p.disc {
     display: block;
     width: fit-content;
     background-color: #96BF48;
-    font-family: monospace;
     font-size: 24px;
-    font-weight: bold;
-    line-height: 90%;
+    font-weight: 700;
+    line-height: 21.6px;
     text-align: center;
     border-radius: 40px;
     outline: none;
@@ -1174,6 +1323,8 @@ p.disc {
     color: #FFFFFF;
     cursor: pointer;
 }
+
+/* Footer */
 
 footer {
     background-color: #2C2C2C;
