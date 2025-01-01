@@ -795,7 +795,7 @@ div#particles-js canvas {
 .portfolio-sec {
     width: 100%;
     padding: 70px 0 0 0;
-    /* margin-bottom: -160px; */
+    margin-bottom: -160px;
     background-image: url(../images/feature-bg.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -821,13 +821,27 @@ div#particles-js canvas {
 
 .portfolio-sec .pf-bottom .pf-bottom-box {
     width: 100%;
-    height: 300px;
-    background: #3D5163 url(../images/pf-img-1.png);
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
+    overflow: hidden;
     border-radius: 16px;
     box-shadow: 4px 4px 16px 0px #3D51633D;
+    background-color: #3D5163;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 20px;
+}
+
+.portfolio-sec .pf-bottom .pf-bottom-box::after {
+    content: '';
+    background-image: url(../images/pf-img-1.png);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 444px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
 }
 
 .box-text {
@@ -916,19 +930,24 @@ div#particles-js canvas {
     background: #FFFFFF;
     border-radius: 16px;
     box-shadow: 4px 4px 16px 0px #96BF483D;
-    display: flex;
-    align-items: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    overflow: hidden;
 }
 
-.box-2 .box-img {
-    width: 440px;
-    height: 320px;
-}
-
-.box-2 .box-img img {
+.box-2::before {
+    content: '';
+    background-image: url(../images/pf-img-3.png);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 440px;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    aspect-ratio: 440 / 320;
+    display: block;
+    margin-left: auto;
 }
 
 .box-2 .box-text {
@@ -1656,7 +1675,6 @@ footer .right-cntn ul li a {
         width: 100%;
         height: 335px;
         max-width: 250px;
-        border: 13px;
     }
 
     .swiper-slide .rev-box .rev-cntn {
@@ -1882,9 +1900,15 @@ footer .right-cntn ul li a {
 }
 
 @media (max-width: 435px) {
-    .container{
+    .container {
         padding: 0 20px;
     }
+
+    .about-sec {
+        padding: 80px 0 50px 0;
+        background-image: url(../images/sq-pattern-mb-about-bg.png);
+    }
+
     .about-md {
         flex-direction: column;
         gap: 40px;
@@ -1917,8 +1941,8 @@ footer .right-cntn ul li a {
 
     .about-bottom .circle-box {
         margin-left: 0;
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
         margin: -24px auto 0 auto;
         /* margin-left: 0; */
     }
@@ -1997,6 +2021,7 @@ footer .right-cntn ul li a {
 
     .portfolio-sec {
         padding-top: 40px;
+        background-image: url(../images/sq-pattern-mb-bg.png);
     }
 
     .choose-us-sec {
@@ -2006,6 +2031,7 @@ footer .right-cntn ul li a {
 
     .testimonials-sec {
         padding: 40px 0;
+        background-image: url(../images/sq-pattern-mb-bg.png);
     }
 
     .tst-bottom {
@@ -2029,12 +2055,13 @@ footer .right-cntn ul li a {
     }
 
     .swiper-slide .rev-box .main-img {
-        max-width: 300px;
+        max-width: 200px;
         height: 211px;
+        border-radius: 10px;
     }
 
     .swiper-slide .rev-box .rev-cntn {
-        max-width: 185px;
+        max-width: 140px;
         padding-right: 15px;
         gap: 20px;
     }
@@ -2104,13 +2131,13 @@ footer .right-cntn ul li a {
     }
 
     .tab button {
-        padding: 12px 23px 12px 23px;
-        font-size: 16px;
+        padding: 10px 11px 10px 16px;
+        font-size: 14px;
         font-weight: bold;
     }
 
     .tabcontent {
-        padding: 13px 16px 13px 13px;
+        padding: 10px 16px 10px 13px;
         margin-top: 40px;
     }
 
@@ -2148,6 +2175,7 @@ footer .right-cntn ul li a {
 
     .contact-sec {
         padding: 40px 0;
+        background-image: url(../images/sq-pattern-mb-bg.png);
     }
 
     .contact-cntn .contact-left-cntn {
@@ -2166,8 +2194,6 @@ footer .right-cntn ul li a {
 
     .contact-cntn .contact-left-cntn ul {
         gap: 8.65px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .contact-cntn .contact-right-cntn form .field-column {
@@ -2192,112 +2218,15 @@ footer .right-cntn ul li a {
         padding: 20px 24px;
         font-size: 16px;
     }
-    .plan-sec {
-        padding: 40px 0;
-    }
-    
-    .tab {
-        gap: 6px;
-    }
-    
-    .tab button {
-        padding: 12px 23px 12px 23px;
-        font-size: 16px;
-        font-weight: bold;
-    }
-    
-    .tabcontent {
-        padding: 13px 16px 13px 13px;
-        margin-top: 40px;
-    }
-    
-    .tabcontent .top h4 {
-        font-size: 14px;
-    }
-    
-    .tabcontent .top .price span {
-        font-size: 30px;
-    }
-    
-    .tabcontent .top h6 {
-        font-size: 12px;
-    }
-    
-    .tabcontent .top {
-        padding-bottom: 25px;
-        gap: 15px;
-    }
-    
-    .tabcontent .bottom ul {
-        padding-top: 25px;
-        gap: 15px;
-    }
-    
-    .tabcontent .bottom ul li {
-        gap: 10px;
-        font-size: 12px;
-    }
-    
-    .tabcontent .bottom ul li img {
-        width: 10px;
-        height: 10px;
-    }
-    
-    .contact-sec {
-        padding: 40px 0;
-    }
-    
-    .contact-cntn .contact-left-cntn {
-        gap: 40px;
-    }
-    
-    .contact-cntn .contact-left-cntn h3 {
-        margin: 0 0 -24px 0;
-        font-size: 16px;
-    }
-    
-    .contact-cntn .contact-left-cntn ul li a img {
-        width: 16px;
-        height: 16px;
-    }
-    
-    .contact-cntn .contact-left-cntn ul {
-        gap: 8.65px;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-    }
-    
-    .contact-cntn .contact-right-cntn form .field-column {
-        flex-direction: column;
-        gap: 16px;
-    }
-    
-    .contact-cntn .contact-right-cntn form .field-row {
-        gap: 16px;
-    }
-    
-    .contact-cntn .contact-left-cntn h3 {
-        font-size: 16px;
-        font-weight: 500;
-    }
-    
-    .contact-cntn .contact-right-cntn form {
-        gap: 16px;
-    }
-    
-    .contact-cntn .contact-right-cntn form button {
-        padding: 20px 24px;
-        font-size: 16px;
-    }
-    
+
     .footer-content {
         padding: 22px 0;
     }
-    
+
     footer .right-cntn ul {
         display: none;
     }
-    
+
     footer .left-cntn p {
         font-size: 10px;
         line-height: 20px;
