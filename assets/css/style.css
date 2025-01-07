@@ -379,11 +379,11 @@ ul.mm-socials li a img {
     mask-image: url(../images/bn-shape.svg);
     mask-repeat: no-repeat;
     mask-position: bottom center;
-    mask-size: 100% auto;
+    mask-size: cover;
     -webkit-mask-image: url(../images/bn-shape.svg);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: bottom center;
-    -webkit-mask-size: 100% auto;
+    -webkit-mask-size: cover;
 }
 
 div#particles-js canvas {
@@ -473,11 +473,11 @@ div#particles-js canvas {
     mask-image: url(../images/bn-shape.svg);
     mask-repeat: no-repeat;
     mask-position: bottom center;
-    mask-size: 100% auto;
+    mask-size: cover;
     -webkit-mask-image: url(../images/bn-shape.svg);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: bottom center;
-    -webkit-mask-size: 100% auto;
+    -webkit-mask-size: cover;
     transform: rotate(-1deg);
 }
 
@@ -537,6 +537,7 @@ div#particles-js canvas {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin-top: -60px;
 }
 
 .about-md {
@@ -613,10 +614,12 @@ div#particles-js canvas {
 .about-bottom .circle-box span img {
     width: 80px;
     height: 80px;
+    transition: all .4s ease;
+    filter: grayscale(1);
 }
 
-.about-bottom .circle-box span img:last-child {
-    display: none;
+.about-bottom .circle-box:hover span img {
+    filter: grayscale(0);
 }
 
 .about-bottom .circle-box h6 {
@@ -639,13 +642,6 @@ div#particles-js canvas {
     border: 1px solid #F4B400;
 }
 
-.about-bottom .circle-box:hover span img:first-child {
-    display: none;
-}
-
-.about-bottom .circle-box:hover span img:last-child {
-    display: block;
-}
 
 .about-bottom .circle-box:hover h6 {
     color: #2C2C2C;
@@ -700,11 +696,19 @@ div#particles-js canvas {
     align-items: center;
     justify-content: space-between;
     padding: 36px 50px;
-    background: transparent;
+    background: #2C2C2C;
     border-top: 1px solid #FFFFFF1F;
     border-radius: 6px;
     margin-top: -50px;
     transition: all .4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.serv-bottom .serv-box:hover {
+    transition: transform 0.4s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+    transform: scale(1.005);
+    z-index: 2;
 }
 
 .serv-bottom .serv-box:first-child {
@@ -760,10 +764,9 @@ div#particles-js canvas {
     transition: opacity .4s ease;
 }
 
-.serv-bottom .serv-box span img:last-child {
-    display: none;
+.serv-bottom .serv-box:not(:hover) span img {
+    filter: brightness(0) invert(1);
 }
-
 
 .serv-bottom .serv-box:hover {
     background-color: #454545;
@@ -780,14 +783,6 @@ div#particles-js canvas {
 
 .serv-bottom .serv-box:hover span {
     background-color: #FFFFFF;
-}
-
-.serv-bottom .serv-box:hover span img:first-child {
-    display: none;
-}
-
-.serv-bottom .serv-box:hover span img:last-child {
-    display: block;
 }
 
 /* Portfolio */
@@ -1254,13 +1249,12 @@ div#particles-js canvas {
 
 /* Style the buttons inside the tab */
 .tab button {
+    position: relative;
+    border: 1px solid #fff;
     float: left;
-    border: none;
     outline: none;
     cursor: pointer;
     background-color: #FFFFFF;
-    border: 1px solid;
-    border-image-source: linear-gradient(270deg, rgba(44, 44, 44, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
     border-radius: 40px;
     padding: 16px 32px;
     transition: all 0.3s ease-in;
@@ -1278,8 +1272,6 @@ div#particles-js canvas {
 /* Create an active/current tablink class */
 .tab button.active {
     background: #96BF48;
-    border: 1px solid;
-    border-image-source: linear-gradient(270deg, #FFFFFF 0%, #96BF48 100%);
     color: #FFFFFF;
 }
 
@@ -1493,6 +1485,7 @@ p.disc {
 
 .contact-cntn .contact-right-cntn form .field-column .field-row textarea {
     height: 80px;
+    min-height: 80px;
     padding: 16px;
     background-color: #FFFFFF;
     border: 1px solid #e0e0e0;
@@ -1504,6 +1497,8 @@ p.disc {
     text-align: left;
     color: #848484;
     overflow-y: auto;
+    resize: vertical;
+    max-height: 300px;
 }
 
 .contact-cntn .contact-right-cntn form button {
@@ -2135,9 +2130,11 @@ footer .right-cntn ul li a {
         font-size: 24px;
         line-height: 32px;
     }
-    .choose-us-sec .ch-cntn .title h2{
+
+    .choose-us-sec .ch-cntn .title h2 {
         text-align: center;
     }
+
     .title h2 {
         font-size: 24px;
         line-height: 32px;
@@ -2384,7 +2381,8 @@ footer .right-cntn ul li a {
         flex-direction: column-reverse;
         gap: 20px;
     }
-.box-text {
+
+    .box-text {
         padding: 20px 15px 20px 20px;
     }
 
@@ -2425,10 +2423,12 @@ footer .right-cntn ul li a {
         background-size: 110%;
         background-position: center;
     }
-    .mm-main{
+
+    .mm-main {
         background-image: url(../images/sq-pattern-mb.png);
     }
-    .mm-main{
+
+    .mm-main {
         padding: 20px 20px 15px;
     }
 }
