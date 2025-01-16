@@ -439,14 +439,14 @@ div#particles-js canvas {
     width: fit-content;
     border: none;
     outline: none;
-    padding: 24px 44px;
+    padding: 16px 24px;
     background: #96BF48;
     border-radius: 40px;
     text-transform: capitalize;
     font-family: "Monospace";
-    font-size: 24px;
+    font-size: 16px;
     color: #fff;
-    line-height: 22px;
+    line-height: 14.5px;
     font-weight: 700;
     letter-spacing: -1px;
     transition: all 0.3s;
