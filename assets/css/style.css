@@ -1550,9 +1550,39 @@ footer .right-cntn ul li a {
 
 
 
+.terms-sec{
+    width: 100%;
+    padding: 80px 0 120px 0;
+}
+.privacy-sec{
+    width: 100%;
+    padding: 80px 0 120px 0;
+}
+.sec-title h1{
+    margin-bottom: 30px;
+    font-family: Inter;
+    color: #96BF48;
+    font-size: 40px;
+    display: block;
+    line-height: 1.2em;
+    font-weight: 500;
+    text-align: center;
+}
 
-
-
+.discription{
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+    gap: 20px;
+}
+.discription p{
+    font-family: Inter;
+    font-size: 18px;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 400;
+    color: #2C2C2CDE;
+}
 
 
 
@@ -2528,6 +2558,4 @@ footer .right-cntn ul li a {
         font-size: 14px;
         line-height: 21px;
     }
-
-
 }
