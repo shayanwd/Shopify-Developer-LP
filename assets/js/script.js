@@ -4,6 +4,7 @@ function menuAnimation() {
     const myMenu = document.querySelector(".mm-main")
     const mmOpen = document.querySelector(".mm-toggle")
     const mmClose = document.querySelector(".mm-close")
+    const menuLinks = document.querySelectorAll(".mm-c1 ul li a")
 
     let menuTL = gsap.timeline({ paused: true })
         .to(".mm-main", {
@@ -41,5 +42,12 @@ function menuAnimation() {
             myMenu.classList.remove("active")
         }
     });
+
+    menuLinks.forEach((menuLink)=>{
+        menuLink.addEventListener("click", ()=>{
+            menuTL.reverse()
+            myMenu.classList.remove("active")
+        })
+    })
 }
 menuAnimation()
