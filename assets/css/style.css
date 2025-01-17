@@ -2281,7 +2281,9 @@ footer .right-cntn ul li a {
     .swiper {
         height: 214px;
     }
-
+    .ex-boxes .grad-box .box-text .site-title img{
+        max-width: 140px;
+    }
     .swiper-slide .rev-box .rev-cntn .reviewer-name {
         font-size: 14px;
         line-height: 22px;
