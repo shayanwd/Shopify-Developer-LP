@@ -1,3 +1,5 @@
+new WOW().init();
+
 // Initialize a new Lenis instance for smooth scrolling
 const lenis = new Lenis();
 
@@ -89,10 +91,14 @@ function menuAnimation() {
 }
 menuAnimation()
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".testimonials-swiper", {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: false,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,

@@ -30,7 +30,7 @@ const createShape = function (x, y) {
         restitution: 0.9, // Add slight bounce effect
         render: {
             sprite: {
-                texture: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27' width='27' height='27'%3E%3Crect x='3' y='3' width='21' height='21' fill='%2396BF48' fill-opacity='0.57'/%3E%3C/svg%3E",
+                texture: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27' width='27' height='27'%3E%3Crect x='0' y='0' width='21' height='21' fill='%2396BF48' fill-opacity='0.57'/%3E%3C/svg%3E",
             },
         },
     });
