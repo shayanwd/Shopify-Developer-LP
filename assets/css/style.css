@@ -1593,15 +1593,17 @@ footer .right-cntn ul li a {
 
 
 
-.terms-sec{
+.terms-sec {
     width: 100%;
     padding: 80px 0 120px 0;
 }
-.privacy-sec{
+
+.privacy-sec {
     width: 100%;
     padding: 80px 0 120px 0;
 }
-.sec-title h1{
+
+.sec-title h1 {
     margin-bottom: 30px;
     font-family: Inter;
     color: #96BF48;
@@ -1612,13 +1614,14 @@ footer .right-cntn ul li a {
     text-align: center;
 }
 
-.discription{
+.discription {
     display: flex;
     flex-direction: column;
     margin: 0 60px;
     gap: 20px;
 }
-.discription p{
+
+.discription p {
     font-family: Inter;
     font-size: 18px;
     text-align: center;
