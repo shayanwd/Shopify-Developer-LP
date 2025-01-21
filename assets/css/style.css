@@ -167,7 +167,7 @@ h6 {
     width: 100%;
     height: 100%;
     padding: 70px 70px 60px;
-    background-image: url(../images/sq-pattern.png);
+    background-image: url(../images/sq-pattern.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -187,7 +187,7 @@ h6 {
     right: 0;
     width: 60%;
     aspect-ratio: 720/129;
-    background-image: url(../images/mm-shade.png);
+    background-image: url(../images/mm-shade.webp);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: contain;
@@ -201,7 +201,7 @@ h6 {
     left: 0;
     width: 60%;
     aspect-ratio: 720/129;
-    background-image: url(../images/mm-shade.png);
+    background-image: url(../images/mm-shade.webp);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: contain;
@@ -403,7 +403,7 @@ ul.mm-socials li a img {
     margin: 0 auto;
     aspect-ratio: 1264/450;
     z-index: 10;
-    background-image: url(../images/bn-shadow.png);
+    background-image: url(../images/bn-shadow.webp);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;
@@ -576,7 +576,7 @@ div#particles-js canvas {
 .about-sec {
     width: 100%;
     padding: 160px 0 120px 0;
-    background-image: url(../images/sq-pattern.png);
+    background-image: url(../images/sq-pattern.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -705,7 +705,7 @@ div#particles-js canvas {
 .services-sec {
     width: 100%;
     padding: 70px 0 80px 0;
-    background-image: url(../images/Services-bg.png);
+    background-image: url(../images/Services-bg.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -829,7 +829,7 @@ div#particles-js canvas {
     width: 100%;
     padding: 70px 0 0 0;
     margin-bottom: -160px;
-    background-image: url(../images/feature-bg.png);
+    background-image: url(../images/feature-bg.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -866,7 +866,7 @@ div#particles-js canvas {
 
 .portfolio-sec .pf-bottom .pf-bottom-box::after {
     content: '';
-    background-image: url(../images/pf-img-1.png);
+    background-image: url(../images/pf-img-1.webp);
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1015,7 +1015,7 @@ div#particles-js canvas {
 .choose-us-sec {
     width: 100%;
     padding: 267px 0 219px;
-    background-image: url(../images/choose-bg.png);
+    background-image: url(../images/choose-bg.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1045,7 +1045,7 @@ div#particles-js canvas {
 .testimonials-sec {
     width: 100%;
     padding: 66px 0 80px 0;
-    background-image: url(../images/sq-pattern.png);
+    background-image: url(../images/sq-pattern.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1245,7 +1245,7 @@ div#particles-js canvas {
 .plan-sec {
     width: 100%;
     padding: 70px 0 114px 0;
-    background-image: url(../images/plan-bg.png);
+    background-image: url(../images/plan-mobile-bg.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1328,7 +1328,7 @@ div#particles-js canvas {
     padding: 40px;
     background-color: white;
     border: 10px solid #FFFFFF;
-    background-image: url(../images/tab-bg.png);
+    background-image: url(../images/tab-bg.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1412,7 +1412,7 @@ div#particles-js canvas {
 .contact-sec {
     width: 100%;
     padding: 70px 0 86px 0;
-    background-image: url(../images/contact-bg.png);
+    background-image: url(../images/contact-bg.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2172,7 +2172,7 @@ footer .right-cntn ul li a {
 
     .about-sec {
         padding: 80px 0 50px 0;
-        background-image: url(../images/sq-pattern-mb-about-bg.png);
+        background-image: url(../images/sq-pattern-mb-about-bg.webp);
     }
 
     .about-md {
@@ -2228,7 +2228,7 @@ footer .right-cntn ul li a {
 
     .services-sec {
         padding: 40px 0;
-        background-image: url(../images/service-mb-bg.png);
+        background-image: url(../images/service-mb-bg.webp);
     }
 
     .site-btn {
@@ -2290,17 +2290,17 @@ footer .right-cntn ul li a {
 
     .portfolio-sec {
         padding-top: 40px;
-        background-image: url(../images/sq-pattern-mb-bg.png);
+        background-image: url(../images/sq-pattern-mb-bg.webp);
     }
 
     .choose-us-sec {
         padding: 247px 0 205px 0;
-        background-image: url(../images/choose-us-mb-bg.png);
+        background-image: url(../images/choose-us-mb-bg.webp);
     }
 
     .testimonials-sec {
         padding: 40px 0;
-        background-image: url(../images/sq-pattern-mb-bg.png);
+        background-image: url(../images/sq-pattern-mb-bg.webp);
     }
 
     .tst-bottom {
@@ -2403,7 +2403,7 @@ footer .right-cntn ul li a {
 
     .plan-sec {
         padding: 40px 0;
-        background-image: url(../images/plan-mobile-bg.png);
+        background-image: url(../images/plan-mobile-bg.webp);
     }
 
     .tab {
@@ -2463,7 +2463,7 @@ footer .right-cntn ul li a {
 
     .contact-sec {
         padding: 40px 0;
-        background-image: url(../images/sq-pattern-mb-bg.png);
+        background-image: url(../images/sq-pattern-mb-bg.webp);
     }
 
     .contact-cntn .contact-left-cntn {
@@ -2581,7 +2581,7 @@ footer .right-cntn ul li a {
     }
 
     .mm-main {
-        background-image: url(../images/sq-pattern-mb.png);
+        background-image: url(../images/sq-pattern-mb.webp);
     }
 
     .mm-main {
