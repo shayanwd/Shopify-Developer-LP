@@ -89,24 +89,10 @@ function menuAnimation() {
 }
 menuAnimation()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 20,
-    loop: true,
+    loop: false,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -116,7 +102,6 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
-
 
 
 function openCity(evt, cityName) {
