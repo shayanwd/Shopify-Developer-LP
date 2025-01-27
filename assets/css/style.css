@@ -2687,3 +2687,11 @@ footer .right-cntn ul li a {
         line-height: 21px;
     }
 }
+
+
+
+
+.portfolio-cntn{
+    display: grid;
+    align-items: center;
+}
