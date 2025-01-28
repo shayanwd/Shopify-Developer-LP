@@ -835,7 +835,7 @@ div#particles-js canvas {
     width: 100%;
     padding: 70px 0 0 0;
     margin-bottom: -160px;
-    background-image: url(../images/feature-bg.webp);
+    background-image: url(../images/feature-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -872,7 +872,7 @@ div#particles-js canvas {
 
 .portfolio-sec .pf-bottom .pf-bottom-box::after {
     content: '';
-    background-image: url(../images/pf-img-1.webp);
+    background-image: url(../images/pf-img-1.png);
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2690,8 +2690,82 @@ footer .right-cntn ul li a {
 
 
 
-
-.portfolio-cntn{
+.projects-sec-two {
+    width: 100%;
+    padding: 70px 0 140px 0;
+}
+.projects-sec-two .container{
+    overflow: visible;
+}
+.projects-sec-two .portfolio-cntn {
+    width: 100%;
     display: grid;
-    align-items: center;
+    grid-template-columns: 1fr 65%;
+    gap: 80px;
+}
+
+.projects-sec-two .portfolio-cntn .pf-left {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.projects-sec-two .portfolio-cntn .before-title h4 {
+    margin-bottom: -40px;
+}
+
+.projects-sec-two .pf-right {
+    width: 100%;
+    margin-top: 206px;
+}
+
+.projects-sec-two .prj-card-holder {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    display:flex;
+    /* grid-template-columns: 100% 100% 100% 100% 100%; */
+    gap: 24px;
+    border-radius: 16px;
+}
+
+.projects-sec-two .project-card {
+    position: relative;
+    width: 685px;
+    min-width: 685px;
+    height: auto;
+}
+
+.projects-sec-two .project-card img {
+    width: 100%;
+    height: 100%;
+}
+.projects-sec-two .card-cntn{
+    position: absolute;
+    bottom: 18.75px;
+    left: 18.75px;
+    right: 18.75px;
+}
+.projects-sec-two .card-title h1{
+    font-family: Inter;
+    font-size: 32px;
+    line-height: 140%;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.projects-sec-two .card-spec{
+    display: flex;
+    margin-top: 12px;
+    gap: 12px;
+}
+.projects-sec-two .card-spec span{
+    padding: 10px 16px;
+    background-color: #0000001A;
+    border: 0.78px solid #FFFFFF33;
+    backdrop-filter: blur(42px);
+    border-radius: 20px;
+    font-size: 14px;
+font-weight: 500;
+line-height: 18px;
+color: white;
 }
