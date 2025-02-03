@@ -72,6 +72,8 @@ Disallow: /blogs/tags/
 Disallow: /blogs/services/*sort_by*
 Disallow: /blogs/services/*+*
 Disallow: /blogs/services/**
+Disallow: /rest/contact-form.php
+Disallow: /rest/contact-form.php?*
 
 # Allow Rules
 Allow: /sitemap.xml
