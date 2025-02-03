@@ -1,0 +1,80 @@
+User-agent: *
+
+# WordPress and System Files
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-content/uploads/
+Disallow: /wp-content/uploads/wc-logs/
+Disallow: /wp-content/uploads/woocommerce_uploads/
+Disallow: /wp-
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /account/
+
+# Search and Feed Related
+Disallow: /search
+Disallow: /search?q=
+Disallow: /?s=
+Disallow: *&s=
+Disallow: */feed
+Disallow: */feeds
+Disallow: */rss
+Disallow: */embed
+
+# Taxonomies and Archives
+Disallow: /tag/
+Disallow: /tags/
+Disallow: /*tag/
+Disallow: /*category/
+Disallow: /*industry/
+Disallow: /author/
+Disallow: /*.html$
+
+# Special Pages and Parameters
+Disallow: *?attachment_id=
+Disallow: /*?*oseid=*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /*/*?*ls=*&ls=*
+Disallow: /*/*?*ls*ls*
+Disallow: /*/1000$
+
+# Landing Pages
+Disallow: /landing/
+Disallow: /landing-page/
+Disallow: /landingpage[2-7]/
+Disallow: /landingpage11/
+
+# Assets and Public
+Disallow: /assets/
+Disallow: /public/
+Disallow: /assets/images/Pixcile-Compnay-Deck-2024.pdf
+
+# Case Studies
+Disallow: /case-studies/moodbe
+Disallow: /case-studies/kinekt
+Disallow: /case-studies/point2-design
+Disallow: /thanks-gcc
+
+# Shop
+Disallow: /shop/
+Disallow: /shop/page/
+
+# Blog Specific Rules
+Disallow: /blogs/wp-content/plugins/
+Disallow: /blogs/wp-admin/
+Disallow: /blogs/get-posts/
+Disallow: /blogs/author/
+Disallow: /blogs/*.html$
+Disallow: /blogs/search
+Disallow: /blogs/tag/
+Disallow: /blogs/tags/
+Disallow: /blogs/services/*sort_by*
+Disallow: /blogs/services/*+*
+Disallow: /blogs/services/**
+
+# Allow Rules
+Allow: /sitemap.xml
+
+# Sitemap Declaration
+Sitemap: https://shopifydeveloperscompany.com/sitemap.xml
