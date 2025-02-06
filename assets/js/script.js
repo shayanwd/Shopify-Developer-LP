@@ -20,7 +20,70 @@ gsap.ticker.lagSmoothing(0);
 
 
 
+// const traveller = document.querySelector(".traveller")
+// if (traveller) {
+//     const travellerWidht = traveller.getBoundingClientRect().width
+//     const headingWidth = traveller.querySelector(".traveller-inner").getBoundingClientRect().width; 
+//     const finalWidth = travellerWidht - headingWidth
+//     gsap.to(traveller.querySelector(".traveller-inner"), {
+//         scrollTrigger: {
+//             start: "top 15%",
+//             end: "bottom bottom",
+//             trigger: traveller,
+//             scrub: 1,
+//             markers: true,
+//         },
+//         x: finalWidth,
+//     })
+// }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const traveller = document.querySelector(".traveller");
+
+    if (traveller) {
+        const travellerInner = traveller.querySelector(".traveller-inner");
+        if (!travellerInner) return;
+
+        const updateAnimation = () => {
+            const travellerWidth = traveller.getBoundingClientRect().width;
+            const headingWidth = travellerInner.getBoundingClientRect().width;
+            const finalWidth = travellerWidth - headingWidth;
+
+            gsap.to(travellerInner, {
+                x: finalWidth,
+                scrollTrigger: {
+                    trigger: traveller,
+                    start: "top 15%",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    // markers: true, 
+                },
+            });
+
+            // Refresh ScrollTrigger for proper calculations
+            requestAnimationFrame(() => ScrollTrigger.refresh());
+        };
+
+        updateAnimation(); // Initial execution
+
+        // Handle window resize properly
+        window.addEventListener("resize", () => {
+            requestAnimationFrame(() => {
+                ScrollTrigger.refresh();
+                updateAnimation();
+            });
+        });
+
+        // Ensure GSAP syncs with Lenis
+        function raf(time) {
+            lenis.raf(time);
+            ScrollTrigger.update(); // Sync ScrollTrigger
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    }
+});
 
 
 
@@ -259,3 +322,60 @@ function showMessage(elementId) {
         document.getElementById(elementId).classList.add('d-none');
     }, 5000);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const mooverSec = document.querySelector('.projects-sec-two');
+// if (mooverSec) {
+//     const traveller = document.querySelector('.traveller');
+//     const travellerWidth = traveller.getBoundingClientRect().width; 
+//     const travellerInner = document.querySelector('.traveller-inner');
+//     const travellerInnerWidth = travellerInner.getBoundingClientRect().width;
+//     const finalVal = travellerWidth - travellerInnerWidth;
+//     console.log(finalVal);
+    
+    
+//     gsap.to(travellerInner, {
+//         scrollTrigger: {
+//             trigger: mooverSec,
+//             start: 'top top',
+//             end: 'bottom center',
+//             scrub: 1,
+//             // markers: true
+//         },
+//         x: finalVal - -50,
+//     });
+
+// }
+
+

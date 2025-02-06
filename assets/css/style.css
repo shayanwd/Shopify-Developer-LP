@@ -2693,6 +2693,19 @@ footer .right-cntn ul li a {
 .projects-sec-two {
     width: 100%;
     padding: 70px 0 140px 0;
+    overflow-x: clip;
+}
+
+.traveller {
+    width: 100%;
+    min-height: 400vh;
+}
+
+.traveller-inner {
+    width: fit-content;
+    position: sticky;
+    top: 140px;
+    transform: translate3d(0px, 0px, 0px);
 }
 
 .projects-sec-two .container {
@@ -2700,16 +2713,18 @@ footer .right-cntn ul li a {
 }
 
 .projects-sec-two .portfolio-cntn {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 65%;
-    gap: 80px;
+    width: fit-content;
+    display: flex;
+    gap: 60px;
 }
 
 .projects-sec-two .portfolio-cntn .pf-left {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    justify-content: center;
+    gap: 30px;
+    width: 490px;
+    max-width: 100%;
 }
 
 .projects-sec-two .portfolio-cntn .before-title h4 {
@@ -2718,13 +2733,10 @@ footer .right-cntn ul li a {
 
 .projects-sec-two .pf-right {
     width: 100%;
-    margin-top: 206px;
 }
 
 .projects-sec-two .prj-card-holder {
     width: 100%;
-    overflow: hidden;
-    overflow-x: auto;
     display: flex;
     /* grid-template-columns: 100% 100% 100% 100% 100%; */
     gap: 24px;
