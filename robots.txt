@@ -1,12 +1,6 @@
 User-agent: *
 
-# WordPress and System Files
-Disallow: /wp-admin/
-Disallow: /wp-content/
-Disallow: /wp-content/uploads/
-Disallow: /wp-content/uploads/wc-logs/
-Disallow: /wp-content/uploads/woocommerce_uploads/
-Disallow: /wp-
+# WordPress and System Files 
 Disallow: /cgi-bin/
 Disallow: /admin/
 Disallow: /account/
@@ -47,8 +41,7 @@ Disallow: /landingpage11/
 
 # Assets and Public
 Disallow: /assets/
-Disallow: /public/
-Disallow: /assets/images/Pixcile-Compnay-Deck-2024.pdf
+Disallow: /public/ 
 
 # Case Studies
 Disallow: /case-studies/moodbe
