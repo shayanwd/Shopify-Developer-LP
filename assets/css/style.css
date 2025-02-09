@@ -596,7 +596,7 @@ div#particles-js canvas {
     max-width: 525px;
 }
 
-.about-md .md-left h1 {
+.about-md .md-left h2 {
     font-family: Inter;
     font-size: 32px;
     font-weight: 400;
@@ -608,7 +608,7 @@ div#particles-js canvas {
     color: #2C2C2C;
 }
 
-.about-md .md-left h1 span {
+.about-md .md-left h2 span {
     font-weight: 500;
     color: #648C3C;
 }
@@ -755,7 +755,7 @@ div#particles-js canvas {
     margin-top: 0;
 }
 
-.serv-bottom .serv-box h1 {
+.serv-bottom .serv-box h3 {
     font-family: Inter;
     font-size: 80px;
     font-weight: 500;
@@ -1431,7 +1431,7 @@ div#particles-js canvas {
     align-items: flex-start;
 }
 
-.before-title h4 {
+.before-title span {
     font-size: 20px;
     font-weight: 700;
     line-height: 28px;
@@ -1824,7 +1824,7 @@ footer .right-cntn ul li a {
     right: 18.75px;
 }
 
-.projects-sec-two .card-title h1 {
+.projects-sec-two .card-title h4 {
     font-family: Inter;
     font-size: 32px;
     line-height: 140%;

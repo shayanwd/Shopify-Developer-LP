@@ -44,7 +44,7 @@
         line-height: 18px;
     }
 
-    .serv-bottom .serv-box h1 {
+    .serv-bottom .serv-box h3 {
         font-size: 70px;
         line-height: 86px;
     }
@@ -248,7 +248,7 @@
         max-width: 360px;
     }
 
-    .about-md .md-left h1 {
+    .about-md .md-left h2 {
         font-size: 28px;
         line-height: 40px;
     }
@@ -286,7 +286,7 @@
         padding: 20px 10px;
     }
 
-    .serv-bottom .serv-box h1 {
+    .serv-bottom .serv-box h3 {
         font-size: 25px;
         line-height: 1.3em;
         max-width: 130px;
@@ -538,7 +538,7 @@
         width: 380px;
     }
 
-    .projects-sec-two .card-title h1 {
+    .projects-sec-two .card-title h4 {
         font-size: 22px;
     }
 
@@ -620,6 +620,11 @@
         padding: 10px 30px;
         font-size: 14px;
         line-height: 1.3em;
+    }
+
+    .serv-bottom .serv-box {
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
 }
