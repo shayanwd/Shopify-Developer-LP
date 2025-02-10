@@ -7,19 +7,25 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.shopifydeveloperscompany.com/privacy.html</loc>
+        <loc>https://www.shopifydeveloperscompany.com/privacy</loc>
         <lastmod>2024-02-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.shopifydeveloperscompany.com/terms.html</loc>
+        <loc>https://www.shopifydeveloperscompany.com/terms</loc>
+        <lastmod>2024-02-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+     <url>
+        <loc>https://www.shopifydeveloperscompany.com/contact</loc>
         <lastmod>2024-02-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.shopifydeveloperscompany.com/blogs/post-sitemap.xml</loc>
+        <loc>https://www.shopifydeveloperscompany.com/blogs</loc>
         <lastmod>2024-02-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
