@@ -627,4 +627,41 @@
         gap: 10px;
     }
 
+    .faq-tab-holder {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .faq-tab-left-bar {
+        width: 100%;
+    }
+
+    .faq-box-title h3 {
+        font-size: 16px;
+    }
+
+    .faq-box {
+        padding: 15px;
+    }
+
+    .faq-box-content {
+
+        padding: 8px 0;
+    }
+
+    .faq-sec .title h2 {
+
+        margin-top: 20px;
+    }
+
+    .faq-box-content p {
+
+        font-size: 14px;
+    }
+
+    .faq-tab-holder {
+        margin-top: 30px;
+    }
+
+
 }

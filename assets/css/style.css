@@ -1856,6 +1856,133 @@ footer .right-cntn ul li a {
     position: relative;
 }
 
+.faq-sec {
+    padding: 80px 0;
+    background-color: #2C2C2C;
+}
+
+.faq-sec .title h2 {
+    color: white;
+    margin-top: 40px;
+}
+
+.faq-tab-holder {
+    display: flex;
+    gap: 20px;
+}
+
+.faq-tab-left-bar {
+    width: 70%;
+}
+
+.faq-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.faq-box-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-box-content {
+    display: none;
+    padding: 15px 0;
+}
+
+.faq-box.active .faq-box-content {
+    display: block;
+}
+
+.faq-box .faq-toggle .plus {
+    display: block;
+}
+
+.faq-box .faq-toggle .minus {
+    display: none;
+}
+
+.faq-box.active .faq-toggle .plus {
+    display: none;
+}
+
+.faq-box.active .faq-toggle .minus {
+    display: block;
+}
+
+.faq-box-title h3 {
+    font-size: 18px;
+    color: #2C2C2C;
+}
+
+.faq-box-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-box-title svg {
+    fill: black;
+    filter: invert(1);
+}
+
+.faq-box-content p {
+    color: #00000076;
+    margin-top: 10px;
+    line-height: 1.4em;
+}
+
+.faq-tab-holder {
+
+    margin-top: 50px;
+}
+
+.faq-tab-right {
+
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.faq-tab-right-holder {
+    height: fit-content;
+    position: sticky;
+    top: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-tab-right h4 {
+    font-size: 20px;
+    color: #2C2C2C;
+}
+
+.faq-tab-right p {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #07111D;
+}
+
+.faq-tab-right a {
+    text-decoration: none;
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #07111D;
+}
+
+.faq-tab-right img {
+    margin: 20px auto 15px auto;
+    display: block;
+    width: fit-content;
+}
+
+
 /* WhatsApp Floating Button */
 .whatsapp-float {
     position: fixed;

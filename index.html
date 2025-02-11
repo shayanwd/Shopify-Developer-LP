@@ -938,6 +938,37 @@
         </div>
     </section>
 
+    <section class="faq-sec" id="faq">
+        <div class="container">
+
+            <div class="before-title">
+                <span>Got some questions?</span>
+            </div>
+
+            <div class="title">
+                <h2>Read the FAQs</h2>
+            </div>
+
+            <div class="faq-tab-holder">
+                <div class="faq-tab-left-bar" id="faqContainer">
+                    <!-- FAQs will be dynamically inserted here -->
+                </div>
+                <div class="faq-tab-right-holder">
+                    <div class="faq-tab-right">
+                        <h4>Can’t find your answer?</h4>
+                        <img src="assets/images/review-imgs.png" alt="" />
+                        <p>Contact us:</p>
+                        <a href="tel:+6582336257">+65 8233 6257</a>
+                    </div>
+                    <a class="site-btn" href="https://wa.me/6582336257">Let’s talk</a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
     <section id="contact" class="contact-sec wow animate__animated animate__fadeIn">
         <div class="container">
             <div class="contact-cntn">
@@ -1107,8 +1138,99 @@
     <script src="assets/js/effects.js" defer></script>
     <script src="assets/js/script.js" defer></script>
 
+    <script>
+        const faqs = [
+            {
+                question: "What is Shopify development?",
+                answer: "Shopify development involves creating and customizing eCommerce stores on the Shopify platform, enhancing user experience, functionality, and overall performance."
+            },
+            {
+                question: "How can Shopify help my business grow?",
+                answer: "Shopify offers powerful eCommerce solutions that boost online visibility, streamline store management, and improve customer experiences, leading to increased sales and growth."
+            },
+            {
+                question: "What Shopify development services do you offer?",
+                answer: "We provide custom Shopify design, theme development, Shopify app development, store migrations, SEO optimization, and ongoing store maintenance."
+            },
+            {
+                question: "Why should I choose Shopify for my eCommerce store?",
+                answer: "Shopify is a user-friendly, secure, and scalable platform that allows businesses to manage their online stores efficiently while offering extensive customization options."
+            },
+            {
+                question: "Can you help me migrate my store to Shopify?",
+                answer: "Yes, we specialize in seamless Shopify migrations, ensuring minimal downtime and smooth transitions from other platforms to Shopify."
+            },
+            {
+                question: "Do you provide Shopify SEO services?",
+                answer: "Absolutely! Our Shopify SEO services are designed to optimize your store for search engines, improving your rankings, visibility, and organic traffic."
+            },
+            {
+                question: "How long does it take to build a Shopify store?",
+                answer: "The timeline for building a Shopify store depends on the complexity of your requirements, but most projects are completed within 2-4 weeks."
+            },
+            {
+                question: "Will my Shopify store be mobile-friendly?",
+                answer: "Yes, all Shopify stores we design and develop are fully responsive, ensuring they work seamlessly on mobile devices."
+            },
+            {
+                question: "Can you customize Shopify themes?",
+                answer: "Yes, we offer custom Shopify theme development and customization to ensure your store reflects your brand and provides an optimal shopping experience."
+            },
+            {
+                question: "Do you offer Shopify store maintenance?",
+                answer: "Yes, we offer ongoing maintenance and support to ensure your store runs smoothly and stays updated with the latest features."
+            },
+            {
+                question: "How can Shopify apps improve my store?",
+                answer: "Shopify apps can enhance your store with additional features like customer reviews, inventory management, marketing tools, and more, tailored to your business needs."
+            }
+        ];
 
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqContainer = document.getElementById('faqContainer');
 
+            faqs.forEach((faq, index) => {
+                const faqBox = document.createElement('div');
+                faqBox.className = 'faq-box';
+                faqBox.innerHTML = `
+                <div class="faq-box-title">
+                    <h3>${index + 1}. ${faq.question}</h3>
+                    <span class="faq-toggle">
+                        <svg class="plus" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <svg class="minus" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="faq-box-content">
+                    <p>${faq.answer}</p>
+                </div>
+            `;
+                faqContainer.appendChild(faqBox);
+            });
+
+            // Add click event listeners to all FAQ boxes
+            const faqBoxes = document.querySelectorAll('.faq-box');
+
+            // Open first FAQ by default
+            faqBoxes[0].classList.add('active');
+
+            faqBoxes.forEach(box => {
+                box.querySelector('.faq-box-title').addEventListener('click', () => {
+                    // Close all other FAQs
+                    faqBoxes.forEach(otherBox => {
+                        if (otherBox !== box) {
+                            otherBox.classList.remove('active');
+                        }
+                    });
+                    // Toggle current FAQ
+                    box.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 
 </body>
 
