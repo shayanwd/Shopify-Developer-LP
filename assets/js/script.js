@@ -148,8 +148,7 @@ function openCity(evt, cityName) {
 
 const formmmmm = document.getElementById('contactForm')
 if (formmmmm) {
-    
-formmmmm.getElementById('contactForm').addEventListener('submit', function (event) {
+formmmmm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     // Reset any previous error states
@@ -282,6 +281,5 @@ function showMessage(elementId) {
         document.getElementById(elementId).classList.add('d-none');
     }, 5000);
 }
-
 
 }
