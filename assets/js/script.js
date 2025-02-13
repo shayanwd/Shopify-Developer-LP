@@ -34,7 +34,7 @@ if (traveller) {
             start: "top 0%",
             end: "bottom bottom",
             trigger: "#projects",
-            scrub: 1,
+            scrub: 0.7,
             // markers: true,
         },
         x: finalWidth,
@@ -283,3 +283,54 @@ function showMessage(elementId) {
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+function loadAnimations() { 
+    let visibleElements = [];
+
+    const revealOnScroll = (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                if (!visibleElements.includes(entry.target)) {
+                    visibleElements.push(entry.target);
+                }
+            }
+        });
+
+        if (visibleElements.length > 1) {
+            visibleElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('reveal');
+                    observer.unobserve(element);
+
+                    visibleElements = visibleElements.filter(el => el !== element);
+                }, index * 200);
+            });
+        } else if (visibleElements.length === 1) {
+
+            const element = visibleElements[0];
+            element.classList.add('reveal');
+            observer.unobserve(element);
+            visibleElements = [];
+        }
+    };
+
+    const observer = new IntersectionObserver(revealOnScroll, {
+        root: null,
+        threshold: 0.2
+    });
+
+    // Observe all h1, h2, h3, h4, and .bcr-col1 svg elements
+    document.querySelectorAll('h1, h2, h3, h4, .masker').forEach((element) => {
+        observer.observe(element);
+    });
+}
+window.addEventListener("DOMContentLoaded",loadAnimations )

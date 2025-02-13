@@ -65,6 +65,46 @@ h6 {
 
 
 
+/* h1,
+h2,
+h3,
+h4,
+.bcr-col1 svg,
+.masker {
+    -webkit-mask-image: linear-gradient(90deg, #fff 33.33%, transparent 66.66%);
+    mask-image: linear-gradient(90deg, #fff 33.33%, transparent 66.66%);
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+    -webkit-mask-size: 300% 100%;
+    mask-size: 300% 100%;
+    transition: mask-position var(--duration, 2s) ease var(--delay, 0s),
+        -webkit-mask-position var(--duration, 2s) ease var(--delay, 0s);
+} */
+h1,
+h2,
+h3,
+h4,
+.bcr-col1 svg,
+.masker {
+    -webkit-mask-image: linear-gradient(90deg, #fff 33.33%, transparent 66.66%);
+    mask-image: linear-gradient(180deg, #fff 33.33%, transparent 66.66%);
+    -webkit-mask-position: 0 100%;
+    mask-position: 0% 100%;
+    -webkit-mask-size: 100% 300%;
+    mask-size: 100% 300%;
+    transition: mask-position var(--duration, 2s) ease var(--delay, 0s), -webkit-mask-position var(--duration, 2s) ease var(--delay, 0s);
+}
+
+/* Reveal animation - moves the mask to show the content */
+.reveal,
+h1.reveal,
+h2.reveal,
+h3.reveal,
+h4.reveal,
+.bcr-col1 svg.reveal {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+}
 
 
 
@@ -287,8 +327,12 @@ ul.mm-socials li a {
     position: relative;
 }
 
+.ctc-foot ul.mm-socials li a {
+    width: fit-content;
+    margin-left: auto;
+}
+
 ul.mm-socials li a:hover {
-    letter-spacing: 0.7px;
     color: hsl(0deg 0% 17.25% / 100%);
     font-weight: 500;
 }
@@ -1882,7 +1926,7 @@ footer .right-cntn ul li a {
 
 .projects-sec-two {
     width: 100%;
-    padding: 70px 0 140px 0;
+    /* padding: 70px 0 140px 0; */
     overflow-x: clip;
 }
 
@@ -1894,7 +1938,10 @@ footer .right-cntn ul li a {
 .traveller-inner {
     width: fit-content;
     position: sticky;
-    top: 140px;
+    top: 110px;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
     transform: translate3d(0px, 0px, 0px);
 }
 
