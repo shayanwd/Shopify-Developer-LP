@@ -146,9 +146,10 @@ function openCity(evt, cityName) {
 }
 
 
-const frommmm = document.getElementById('contactForm')
-if (frommmm) {
-frommmm.addEventListener('submit', function (event) {
+const formmmmm = document.getElementById('contactForm')
+if (formmmmm) {
+    
+formmmmm.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     // Reset any previous error states
@@ -172,7 +173,7 @@ frommmm.addEventListener('submit', function (event) {
     };
 
     // Send the form data
-    fetch('https://shopifydeveloperscompany.com/rest/contact-form.php', {
+    fetch('/rest/contact-form.php', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -281,5 +282,6 @@ function showMessage(elementId) {
         document.getElementById(elementId).classList.add('d-none');
     }, 5000);
 }
+
 
 }
