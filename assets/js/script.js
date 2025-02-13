@@ -1,6 +1,5 @@
 
-gsap.registerPlugin(ScrollTrigger); 
-new WOW().init();
+gsap.registerPlugin(ScrollTrigger);  
 
 // Initialize a new Lenis instance for smooth scrolling
 const lenis = new Lenis({
@@ -75,7 +74,7 @@ function menuAnimation() {
             duration: 0.2,
             delay: -0.2,
         })
-        .from(".mm-c1 ul li, ul.mm-socials li", {
+        .from(".mm-c1 ul li, .mm-main ul.mm-socials li", {
             y: 20,
             opacity: 0,
             stagger: 0.04,
@@ -147,8 +146,9 @@ function openCity(evt, cityName) {
 }
 
 
-
-document.getElementById('contactForm').addEventListener('submit', function (event) {
+const frommmm = document.getElementById('contactForm')
+if (frommmm) {
+frommmm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     // Reset any previous error states
@@ -282,3 +282,4 @@ function showMessage(elementId) {
     }, 5000);
 }
 
+}
