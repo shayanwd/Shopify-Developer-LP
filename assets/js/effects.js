@@ -1,105 +1,105 @@
 // MATTER HOGYA MATTER HOGYA
-const { Engine, Render, Bodies, World, Query, Body } = Matter;
+// const { Engine, Render, Bodies, World, Query, Body } = Matter;
 
-const sectionTag = document.querySelector("section.shapes");
+// const sectionTag = document.querySelector("section.shapes");
 
-// Width and height of the page
-let w = sectionTag.clientWidth;
-let h = sectionTag.clientHeight;
+// // Width and height of the page
+// let w = sectionTag.clientWidth;
+// let h = sectionTag.clientHeight;
 
-// Create Matter.js engine and renderer
-const engine = Engine.create();
+// // Create Matter.js engine and renderer
+// const engine = Engine.create();
 
-const renderer = Render.create({
-    element: sectionTag,
-    engine: engine,
-    options: {
-        width: w,
-        height: h,
-        background: "#2C2C2C",
-        wireframes: false,
-        pixelRatio: window.devicePixelRatio,
-    },
-});
+// const renderer = Render.create({
+//     element: sectionTag,
+//     engine: engine,
+//     options: {
+//         width: w,
+//         height: h,
+//         background: "#2C2C2C",
+//         wireframes: false,
+//         pixelRatio: window.devicePixelRatio,
+//     },
+// });
 
-// Function to create a shape with SVG texture
-const createShape = function (x, y) {
-    return Bodies.rectangle(x, y, 30, 30, { // Size of the shapes
-        frictionAir: 0.01,
-        density: 0.0006, // Lightweight for smooth repelling
-        restitution: 0.9, // Add slight bounce effect
-        render: {
-            sprite: {
-                texture: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27' width='27' height='27'%3E%3Crect x='0' y='0' width='21' height='21' fill='%2396BF48' fill-opacity='0.57'/%3E%3C/svg%3E",
-            },
-        },
-    });
-};
+// // Function to create a shape with SVG texture
+// const createShape = function (x, y) {
+//     return Bodies.rectangle(x, y, 30, 30, { // Size of the shapes
+//         frictionAir: 0.01,
+//         density: 0.0006, // Lightweight for smooth repelling
+//         restitution: 0.9, // Add slight bounce effect
+//         render: {
+//             sprite: {
+//                 texture: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27' width='27' height='27'%3E%3Crect x='0' y='0' width='21' height='21' fill='%2396BF48' fill-opacity='0.57'/%3E%3C/svg%3E",
+//             },
+//         },
+//     });
+// };
 
-// Create walls for shapes to bounce off
-const wallOptions = {
-    isStatic: true,
-    render: {
-        visible: false,
-    },
-};
+// // Create walls for shapes to bounce off
+// const wallOptions = {
+//     isStatic: true,
+//     render: {
+//         visible: false,
+//     },
+// };
 
-const ground = Bodies.rectangle(w / 2, h + 50, w + 100, 110, wallOptions);
-const ceiling = Bodies.rectangle(w / 2, -50, w + 100, 100, wallOptions);
-const leftWall = Bodies.rectangle(-50, h / 2, 100, h + 100, wallOptions);
-const rightWall = Bodies.rectangle(w + 50, h / 2, 100, h + 100, wallOptions);
+// const ground = Bodies.rectangle(w / 2, h + 50, w + 100, 110, wallOptions);
+// const ceiling = Bodies.rectangle(w / 2, -50, w + 100, 100, wallOptions);
+// const leftWall = Bodies.rectangle(-50, h / 2, 100, h + 100, wallOptions);
+// const rightWall = Bodies.rectangle(w + 50, h / 2, 100, h + 100, wallOptions);
 
-// Generate random shapes
-const generateShapes = function (count) {
-    const shapes = [];
-    for (let i = 0; i < count; i++) {
-        const randomX = Math.random() * w; // Random X position
-        const randomY = Math.random() * h; // Random Y position
-        shapes.push(createShape(randomX, randomY));
-    }
-    return shapes;
-};
+// // Generate random shapes
+// const generateShapes = function (count) {
+//     const shapes = [];
+//     for (let i = 0; i < count; i++) {
+//         const randomX = Math.random() * w; // Random X position
+//         const randomY = Math.random() * h; // Random Y position
+//         shapes.push(createShape(randomX, randomY));
+//     }
+//     return shapes;
+// };
 
-const shapes = generateShapes(120); // Increase the number of shapes dynamically
+// const shapes = generateShapes(120); // Increase the number of shapes dynamically
 
-World.add(engine.world, [
-    ground,
-    ceiling,
-    leftWall,
-    rightWall,
-    ...shapes,
-]);
+// World.add(engine.world, [
+//     ground,
+//     ceiling,
+//     leftWall,
+//     rightWall,
+//     ...shapes,
+// ]);
 
-// Add repelling effect on mousemove
-sectionTag.addEventListener("mousemove", function (event) {
-    const mousePosition = { x: event.x, y: event.y - sectionTag.getBoundingClientRect().top };
-    const hoveredShapes = Query.point(shapes, mousePosition);
+// // Add repelling effect on mousemove
+// sectionTag.addEventListener("mousemove", function (event) {
+//     const mousePosition = { x: event.x, y: event.y - sectionTag.getBoundingClientRect().top };
+//     const hoveredShapes = Query.point(shapes, mousePosition);
 
-    hoveredShapes.forEach((shape) => {
-        // Calculate the force direction (away from the mouse pointer)
-        const forceMagnitude = 0.003; // Increased for a noticeable effect
-        const force = {
-            x: (shape.position.x - mousePosition.x) * forceMagnitude,
-            y: (shape.position.y - mousePosition.y) * forceMagnitude,
-        };
+//     hoveredShapes.forEach((shape) => {
+//         // Calculate the force direction (away from the mouse pointer)
+//         const forceMagnitude = 0.003; // Increased for a noticeable effect
+//         const force = {
+//             x: (shape.position.x - mousePosition.x) * forceMagnitude,
+//             y: (shape.position.y - mousePosition.y) * forceMagnitude,
+//         };
 
-        // Apply the force to the shape
-        Body.applyForce(shape, shape.position, force);
-    });
-});
+//         // Apply the force to the shape
+//         Body.applyForce(shape, shape.position, force);
+//     });
+// });
 
-// Run Matter.js engine and renderer
-Engine.run(engine);
-Render.run(renderer);
+// // Run Matter.js engine and renderer
+// Engine.run(engine);
+// Render.run(renderer);
 
-// Update canvas size on window resize
-window.addEventListener("resize", function () {
-    w = sectionTag.clientWidth;
-    h = sectionTag.clientHeight;
+// // Update canvas size on window resize
+// window.addEventListener("resize", function () {
+//     w = sectionTag.clientWidth;
+//     h = sectionTag.clientHeight;
 
-    renderer.options.width = w;
-    renderer.options.height = h;
-});
+//     renderer.options.width = w;
+//     renderer.options.height = h;
+// });
 
 // Initialize particles.js
 document.addEventListener("DOMContentLoaded", function() {
