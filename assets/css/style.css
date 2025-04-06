@@ -826,7 +826,7 @@ div#particles-js canvas {
     text-decoration-skip-ink: none;
     color: #FFFFFF;
     transition: color .4s ease;
-    width: 333px;
+    width: 493px;
 }
 
 .serv-bottom .serv-box p {
@@ -1534,6 +1534,7 @@ div#particles-js canvas {
     text-align: left;
     line-height: 25.2px;
     color: #2C2C2CDE;
+    word-break: break-word;
 }
 
 .contact-cntn .contact-left-cntn ul li a img {

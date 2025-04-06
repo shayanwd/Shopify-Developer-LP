@@ -45,8 +45,9 @@
     }
 
     .serv-bottom .serv-box h3 {
-        font-size: 70px;
-        line-height: 86px;
+        font-size: 42px;
+        line-height: 76px;
+        width: 313px;
     }
 
     .serv-bottom .serv-box {
