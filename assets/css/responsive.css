@@ -622,15 +622,24 @@
 
     .header-row {
 
-        grid-template-columns: 60px 1fr 60px;
+        grid-template-columns: 40% 1fr;
         align-items: center;
         gap: 20px;
+    }
+
+    .header-row .site-btn {
+        padding: 10px 15px;
+        font-size: 12px !important;
     }
 
     .site-btn {
         padding: 15px 30px;
         font-size: 14px;
         line-height: 1.3em;
+    }
+
+    .header-data {
+        display: none;
     }
 
     .serv-bottom .serv-box {
