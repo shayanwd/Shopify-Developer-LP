@@ -222,9 +222,9 @@
     }
 
     ul.mm-socials li a {
-        font-size: 18px;
-        line-height: 22px;
-        gap: 6px;
+        font-size: 14px;
+        line-height: 1.2em;
+        gap: 5px;
     }
 
     ul.mm-socials li a img {
@@ -512,7 +512,7 @@
     }
 
     .banner-cntnt h1 {
-        font-size: 40px;
+        font-size: 30px;
         line-height: 1.3em;
     }
 
@@ -670,7 +670,7 @@
 
     .inner-banner {
         padding: 10px 0;
-        min-height: 50vh;
+        min-height: 65vh;
     }
 
     .inner-banner h1 {
@@ -683,5 +683,17 @@
         font-size: 16px;
 
     }
+
+    .map-sec {
+
+        padding-bottom: 0;
+    }
+
+    .map-sec iframe {
+
+        aspect-ratio: 1.5 / 1;
+        max-height: auto;
+    }
+
 
 }

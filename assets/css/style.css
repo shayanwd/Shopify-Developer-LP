@@ -543,16 +543,16 @@ div#particles-js canvas {
     width: fit-content;
     border: none;
     outline: none;
-    padding: 20px 40px;
+    padding: 16px 40px;
     background: #96BF48;
     border-radius: 40px;
     text-transform: capitalize;
-    font-family: "Monospace";
-    font-size: 20px;
+    /* font-family: "Monospace"; */
+    font-size: 16px;
     color: #fff;
-    line-height: 18px;
+    line-height: 16px;
     font-weight: 700;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
     transition: all 0.3s;
 }
 
@@ -1548,6 +1548,10 @@ p.disc {
     line-height: 28px;
     font-weight: 400;
     color: #2C2C2CDE;
+
+}
+
+.rev-box p.disc {
     -webkit-line-clamp: 3;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -1707,9 +1711,9 @@ a.disc {
 
 .contact-cntn.ctc-grid {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 50%;
-    gap: 20px;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 40px;
     padding: 40px;
     background: #F4F6F8;
     border-radius: 16px;
@@ -2098,8 +2102,8 @@ footer .right-cntn ul li a {
 }
 
 .faq-sec {
-    padding: 80px 0;
-    background-color: #2C2C2C;
+    padding: 80px 0 160px 0;
+    background-color: #3e3d3d;
 }
 
 .faq-sec .title h2 {
@@ -2302,4 +2306,57 @@ footer .right-cntn ul li a {
         padding: 12px;
         border-radius: 50%;
     }
+
+    .contact-cntn.ctc-grid {
+        grid-template-columns: 100%;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .contact-col1 h3 {
+
+        font-size: 35px;
+        line-height: 1.3em;
+    }
+
+    .ctc-social ul li a {
+
+        font-size: 14px;
+        line-height: 1.3em;
+    }
+
+    .ctc-list ul li a {
+
+        gap: 5px !important;
+        margin-top: 10px !important;
+
+        font-size: 12px !important;
+        line-height: 1.3em !important;
+        text-align: left !important;
+    }
+
+    .contact-cntn .contact-right-cntn form .field-row {
+        gap: 0px !important;
+    }
+
+    .contact-cntn .contact-right-cntn form .field-row label {
+        font-size: 14px !important;
+    }
+
+    .ctc-desc {
+
+        margin: 20px 0px;
+    }
+
+    .ctc-desc p {
+        font-size: 14px;
+    }
+
+    .ctc-social p {
+
+        font-size: 14px;
+
+    }
+
+
 }
