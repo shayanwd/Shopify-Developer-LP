@@ -135,7 +135,7 @@ h4.reveal,
 .header-row {
     width: 100%;
     display: grid;
-    grid-template-columns: 100px 1fr 100px;
+    grid-template-columns: 250px 1fr 250px;
     align-items: center;
     gap: 20px;
 }
@@ -146,6 +146,11 @@ h4.reveal,
     color: #fff;
     line-height: 30px;
     font-weight: 500;
+}
+
+.header-data ul li a {
+    color: white !important;
+    margin: 0 !important;
 }
 
 .header-logo {
@@ -165,6 +170,20 @@ h4.reveal,
     max-width: 280px;
 }
 
+.header-toggle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    margin: auto;
+    /* width: min-content; */
+}
+
+.header-toggle a {
+    padding: 15px 30px;
+    font-size: 14px !important;
+}
+
 .header-toggle button {
     background: transparent;
     border: none;
@@ -176,6 +195,7 @@ h4.reveal,
     align-items: center;
     margin-left: auto;
     transition: all 0.2s;
+
 }
 
 .header-toggle button svg path {
@@ -313,6 +333,7 @@ h4.reveal,
     width: 100%;
     display: flex;
     align-items: flex-end;
+    height: 90%;
 }
 
 ul.mm-socials {
@@ -454,7 +475,7 @@ ul.mm-socials li a img {
     z-index: 1;
     display: flex;
     align-items: center;
-    padding: 140px 0px 260px;
+    padding: 180px 0px 260px;
     margin-bottom: -46px;
 }
 
@@ -924,7 +945,7 @@ div#particles-js canvas {
     text-decoration-skip-ink: none;
     color: #FFFFFF;
     transition: color .4s ease;
-    width: 493px;
+    width: 515px;
 }
 
 .serv-bottom .serv-box p {
