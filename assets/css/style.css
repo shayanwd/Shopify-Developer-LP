@@ -112,17 +112,22 @@ h4.reveal,
 
 .site-head {
     width: 100%;
-    /* position: fixed; */
+    position: fixed;
     /* position: relative; */
     top: 0;
     left: 0;
     right: 0;
     padding: 26px 0px;
-    background: #2C2C2C;
+    background-color: #2c2c2cb0;
+    background-image: url(../images/shopify-header-bg-d.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-bottom: 1px solid #96BF48;
     margin: 0 auto;
     z-index: 5;
-    position: sticky;
+    /* position: sticky; */
+    backdrop-filter: blur(10px);
     top: 0;
 }
 
@@ -546,14 +551,64 @@ div#particles-js canvas {
     padding: 16px 40px;
     background: #96BF48;
     border-radius: 40px;
-    text-transform: capitalize;
-    /* font-family: "Monospace"; */
+    text-transform: uppercase;
     font-size: 16px;
     color: #fff;
     line-height: 16px;
     font-weight: 700;
     letter-spacing: 1px;
-    transition: all 0.3s;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.site-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #96BF48, #729c21, #96BF48);
+    background-size: 200% 200%;
+    z-index: -1;
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: gradientMove 3s ease infinite;
+}
+
+.site-btn::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #96BF48, #729c21, #96BF48);
+    background-size: 200% 200%;
+    z-index: -2;
+    border-radius: 42px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    animation: gradientMove 3s ease infinite;
+}
+
+.site-btn .shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transform: skewX(-15deg);
+    animation: shine 3s infinite;
+    z-index: 1;
 }
 
 .banner-cntnt .site-btn {
@@ -562,7 +617,50 @@ div#particles-js canvas {
 }
 
 .site-btn:hover {
-    background: #729c21;
+    transform: translateY(-3px) scale(1.02) rotate(1deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.site-btn:hover::before {
+    opacity: 1;
+}
+
+.site-btn:hover::after {
+    opacity: 1;
+}
+
+.site-btn:active {
+    transform: translateY(0) scale(0.98) rotate(-1deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 .banner-sec::before {
@@ -1009,10 +1107,6 @@ div#particles-js canvas {
 
 .ex-boxes .box .box-text {
     padding: 40px 30px 45px 40px;
-}
-
-.ex-boxes .box .box-text h3 {
-    color: #162120;
 }
 
 .ex-boxes .grad-box .box-text .site-title img {
@@ -1494,7 +1588,7 @@ div#particles-js canvas {
 
 .before-title span {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 28px;
     color: #96BF48;
     text-align: left;
@@ -1953,6 +2047,10 @@ footer .right-cntn ul li a {
     width: 100%;
     /* padding: 70px 0 140px 0; */
     overflow-x: clip;
+    background-image: url(../images/contact-bg.webp);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .traveller {
